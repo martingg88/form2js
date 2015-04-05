@@ -133,7 +133,7 @@
 							namePart[k] = '[' + namePart[k] + ']';
 						}
 
-						arrIdx = namePart[k].match(/([a-z_]+)?\[([a-z_][a-z0-9_]+?)\]/i);
+						arrIdx = namePart[k].match(/([a-z_@]+)?\[([a-z_@][a-z0-9_@]+?)\]/i);
 						if (arrIdx)
 						{
 							for(l = 1; l < arrIdx.length; l++)
