@@ -165,7 +165,7 @@
 				else if (namePart.indexOf('[') > -1)
 				{
 					arrName = namePart.substr(0, namePart.indexOf('['));
-					arrIdx = namePart.replace(/(^([a-z_]+)?\[)|(\]$)/gi, '');
+					arrIdx = namePart.replace(/(^([a-z_@]+)?\[)|(\]$)/gi, '');
 
 					/* Unique array name */
 					arrNameFull += '_' + arrName + '_' + arrIdx;
@@ -197,7 +197,7 @@
 					{
 						if (!arrays[arrNameFull][arrIdx])
 						{
-							if ((/^[0-9a-z_]+\[?/i).test(nameParts[j+1])) currResult[arrName].push({});
+							if ((/^[0-9a-z_@]+\[?/i).test(nameParts[j+1])) currResult[arrName].push({});
 							else currResult[arrName].push([]);
 
 							arrays[arrNameFull][arrIdx] = currResult[arrName][currResult[arrName].length - 1];
